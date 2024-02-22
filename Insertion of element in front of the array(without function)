@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include<stdlib.h>
+int main() {
+    // Write C code here
+    int *arr;
+    int n;
+    int ins;
+   printf("Enter thr num of elements:");
+   scanf("%d",&n);
+   arr=(int*)malloc(n*sizeof(int));
+   for(int i=0;i<n;i++){
+       scanf("%d",arr+i);
+       printf("%d\n",arr[i]);
+   }
+   printf("The element to be inserted");
+   scanf("%d",&ins);
+   for(int i=n;i>0;i--){
+       arr[i]=arr[i-1];
+       }
+   arr[0]=ins;
+   n++;
+   for( int i=0;i<n;i++){
+   printf("%d",arr[i]);
+   }
+  return 0;
+}
